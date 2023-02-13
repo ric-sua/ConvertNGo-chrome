@@ -1,6 +1,6 @@
 
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("variables loaded");
+  console.log("units variables loaded");
 
   // chrome.scripting.executeScript({
   //   target: { tabId: tab.id },
@@ -10,14 +10,14 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tabs) {
+// chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tabs) {
   
-     // console.log(changeInfo.url);
-      chrome.scripting.insertCSS( {
-        target: { tabId: tabId },
-        files: ['css/cssmanip.css']
-      });
-});
+//      // console.log(changeInfo.url);
+//       chrome.scripting.insertCSS( {
+//         target: { tabId: tabId },
+//         files: ['css/cssmanip.css']
+//       });
+// });
 
 
 
