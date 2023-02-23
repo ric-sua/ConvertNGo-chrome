@@ -124,7 +124,12 @@ highlighter.addEventListener("click", async () => {
         if(fractions[selectInput]){
           inputSel.value = fractions[selectInput]
           measurementHandle(rData,selectInput[0],fractions[selectInput]);
-        }else{
+        }
+        else if(!selectInput){
+          measurementHandle(rData,selectInput,selectInput);
+        }
+        else{
+          console.log(selectInput)
           inputSel.value = math.evaluate(selectInput[0]);
           measurementHandle(rData,inputSel.value, inputSel.value);
           // inputSel.value = rData.trim();
